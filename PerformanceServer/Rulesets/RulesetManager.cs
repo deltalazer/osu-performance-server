@@ -2,11 +2,8 @@
 // Licensed under the MIT Licence. See the LICENCE file in the repository root for full licence text.
 
 using osu.Game.Rulesets;
-using osu.Game.Rulesets.Catch;
 using osu.Game.Rulesets.Difficulty;
-using osu.Game.Rulesets.Mania;
 using osu.Game.Rulesets.Osu;
-using osu.Game.Rulesets.Taiko;
 using System.Reflection;
 
 namespace PerformanceServer.Rulesets
@@ -78,12 +75,10 @@ namespace PerformanceServer.Rulesets
         private void LoadOfficialRulesets()
         {
             foreach (Ruleset ruleset in (List<Ruleset>)
-                     [new OsuRuleset(), new TaikoRuleset(), new CatchRuleset(), new ManiaRuleset()])
+                     [new OsuRuleset()])
             {
                 AddRuleset(ruleset);
             }
-
-            _rulesets["catch"] = _rulesets["fruits"];
         }
 
         private void LoadFromDisk()

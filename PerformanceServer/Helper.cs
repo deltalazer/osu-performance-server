@@ -3,9 +3,6 @@
 
 using osu.Game.Rulesets;
 using osu.Game.Rulesets.Osu;
-using osu.Game.Rulesets.Taiko;
-using osu.Game.Rulesets.Catch;
-using osu.Game.Rulesets.Mania;
 using System.Security.Cryptography;
 
 namespace PerformanceServer
