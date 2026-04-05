@@ -36,9 +36,10 @@ This repository can run with a custom `osu.Game.Rulesets.Osu.dll` bundled at:
 
 ```text
 PerformanceServer/libs/osu.Game.Rulesets.Osu.dll
+PerformanceServer/libs/osu.Game.dll
 ```
 
-`PerformanceServer.csproj` references this DLL directly so server-side `/difficulty` and `/performance` use the same osu!standard SR/PP logic as your client fork.
+`PerformanceServer.csproj` references these DLLs directly so server-side `/difficulty` and `/performance` use the same osu!standard SR/PP logic and beatmap gimmick model types as your client fork.
 
 When updating client-side calculation logic, rebuild `osu.Game.Rulesets.Osu.dll` and replace this file before building/publishing the server.
 

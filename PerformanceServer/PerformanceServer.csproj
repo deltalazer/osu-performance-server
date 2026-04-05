@@ -9,13 +9,16 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.24" />
-        <PackageReference Include="ppy.osu.Game" Version="2026.317.0" />
         <PackageReference Include="ppy.osu.Game.Rulesets.Catch" Version="2026.317.0" />
         <PackageReference Include="ppy.osu.Game.Rulesets.Mania" Version="2026.317.0" />
         <PackageReference Include="ppy.osu.Game.Rulesets.Taiko" Version="2026.317.0" />
     </ItemGroup>
 
     <ItemGroup>
+        <Reference Include="osu.Game">
+            <HintPath>libs/osu.Game.dll</HintPath>
+            <Private>true</Private>
+        </Reference>
         <Reference Include="osu.Game.Rulesets.Osu">
             <HintPath>libs/osu.Game.Rulesets.Osu.dll</HintPath>
             <Private>true</Private>
