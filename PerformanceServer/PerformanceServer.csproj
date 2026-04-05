@@ -26,4 +26,14 @@
         </Reference>
     </ItemGroup>
 
+    <Target Name="OverrideBundledOsuAssembliesAfterBuild" AfterTargets="Build">
+        <Copy SourceFiles="libs/osu.Game.dll" DestinationFolder="$(OutDir)" OverwriteReadOnlyFiles="true" />
+        <Copy SourceFiles="libs/osu.Game.Rulesets.Osu.dll" DestinationFolder="$(OutDir)" OverwriteReadOnlyFiles="true" />
+    </Target>
+
+    <Target Name="OverrideBundledOsuAssembliesAfterPublish" AfterTargets="Publish">
+        <Copy SourceFiles="libs/osu.Game.dll" DestinationFolder="$(PublishDir)" OverwriteReadOnlyFiles="true" />
+        <Copy SourceFiles="libs/osu.Game.Rulesets.Osu.dll" DestinationFolder="$(PublishDir)" OverwriteReadOnlyFiles="true" />
+    </Target>
+
 </Project>
