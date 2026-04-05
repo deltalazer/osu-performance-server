@@ -30,6 +30,18 @@ A server for calculating osu! performance points (pp) and star ratings.
 | `OSU_FILE_WEB_URL`      | `https://osu.ppy.sh/osu/{0}` | Format string used to fetch beatmaps by ID. `{0}` replaced with beatmap ID.                 |
 | `MAX_BEATMAP_FILE_SIZE` | `5242880` (5 MB)             | Max size (bytes) allowed when deciding to persist fetched file. Larger files are not saved. |
 
+## Using delta custom osu! ruleset calculations
+
+This repository can run with a custom `osu.Game.Rulesets.Osu.dll` bundled at:
+
+```text
+PerformanceServer/libs/osu.Game.Rulesets.Osu.dll
+```
+
+`PerformanceServer.csproj` references this DLL directly so server-side `/difficulty` and `/performance` use the same osu!standard SR/PP logic as your client fork.
+
+When updating client-side calculation logic, rebuild `osu.Game.Rulesets.Osu.dll` and replace this file before building/publishing the server.
+
 ## Health Endpoints
 
 - `GET /` returns `{ "status": "ok", "time": "<UTC timestamp>" }` for readiness probes.
