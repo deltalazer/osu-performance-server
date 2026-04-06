@@ -8,6 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="16.1.1" />
+        <PackageReference Include="MessagePack.Annotations" Version="3.1.4" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.24" />
         <PackageReference Include="ppy.osu.Framework" Version="2026.318.0" />
         <PackageReference Include="Realm" Version="20.1.0" />
